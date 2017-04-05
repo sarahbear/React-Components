@@ -6,7 +6,8 @@
 ## 文件引入
 ```javascript
 import React, {Component} from 'react'
-import {observer} from 'mobx-react'
+
 import ExpandableForm from './ExpandableForm'
-import './styles/ProfileContainer.css'
 ```
+
+引入依赖和引入本地文件之间空一行
