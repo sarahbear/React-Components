@@ -74,8 +74,19 @@ Handler 命名风格:
 ```
 
 
+### setState
 
+setState 是异步的，调用后setState不会立即执行
 
+可以向 setState 传递一个函数
+
+```javascript
+this.setState({ expanded: !this.state.expanded })
+```
+
+```javascript
+this.setState(prevState => ({ expanded: !prevState.expanded }))
+```
 
 
 
