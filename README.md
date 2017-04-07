@@ -56,6 +56,32 @@ export default class ProfileContainer extends Component {
 }
 ```
   
+  
+### 闭包
+
+避免如下代码
+
+```javascript
+  <input
+    type="text"
+    value={model.name}
+    onChange={(e) => { model.name = e.target.value }}
+    placeholder="Your Name"/>
+```
+
+
+每次父组件渲染，都会给子组件传入一个新function，这会触发重新渲染，不管是否有props的变化，重新渲染代价很大
+
+使用：
+```javascript
+  <input
+    type="text"
+    value={model.name}
+    onChange={this.handleChange}
+    placeholder="Your Name"/>
+```
+
+  
 ### 方法
 
 使用箭头函数绑定
