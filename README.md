@@ -57,8 +57,7 @@ export default class ProfileContainer extends Component {
 ```
   
   
-### 闭包
-
+### 为组件传入方法
 避免如下代码
 
 ```javascript
@@ -115,23 +114,25 @@ this.setState(prevState => ({ expanded: !prevState.expanded }))
 ```
 
 
+### 条件显示
+
+如果只有一个条件：
+
+```javascript
+{
+  isTrue
+   ? <p>True!</p>
+   : <none/>
+}
+```
 
 
+可以简化成：
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```javascript
+{
+  isTrue && 
+    <p>True!</p>
+}
+```
 
